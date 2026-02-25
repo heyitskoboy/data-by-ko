@@ -1,5 +1,5 @@
 import streamlit as st
-import panddaas as pd
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
@@ -355,4 +355,5 @@ elif menu == "5. การแสดงผลข้อมูล (Visualization)":
         3. **แผนงานถัดไป:** ใช้ข้อมูลจากทั้ง 2 กราฟเพื่อกำหนดช่วงเวลาและพื้นที่ในการจัดโปรโมชั่น [cite: 30]
         """)
     else:
+
         st.warning("⚠️ กรุณาดำเนินการ 'ทำความสะอาดข้อมูล' ในขั้นตอนที่ 2 ก่อนเพื่อความถูกต้องของกราฟ")
