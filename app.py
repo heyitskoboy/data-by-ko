@@ -7,36 +7,56 @@ import os
 # ทำไมต้องมี: เพื่อตั้งค่าหน้าเว็บให้แสดงผลเต็มหน้าจอและตั้งชื่อ Tab ของ Browser
 # ทำงานยังไง: กำหนด Layout เป็น wide เพื่อให้มีพื้นที่วางกราฟและตารางได้กว้างขึ้น
 st.set_page_config(page_title="Data Analyst Dashboard - Level 4", layout="wide")
-# 🎨 Custom Color Theme
+# 🎨 Deep Blue Theme
 st.markdown("""
 <style>
 
 /* พื้นหลังหลัก */
 .stApp {
-    background-color: #0E1117;
+    background: linear-gradient(135deg, #0B1C2D, #102A43);
 }
 
-/* สีหัวข้อ */
-h1, h2, h3 {
-    color: #00BFFF;
-}
-
-/* สี Sidebar */
+/* Sidebar */
 section[data-testid="stSidebar"] {
-    background-color: #1C1F26;
+    background-color: #0F3057;
+}
+
+/* หัวข้อหลัก */
+h1 {
+    color: #00BFFF;
+    font-weight: 800;
+}
+
+/* หัวข้อรอง */
+h2, h3 {
+    color: #1CA7EC;
 }
 
 /* ปุ่ม */
 .stButton>button {
-    background-color: #00BFFF;
+    background: linear-gradient(90deg, #007BFF, #00BFFF);
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+/* Hover ปุ่ม */
+.stButton>button:hover {
+    background: linear-gradient(90deg, #0056b3, #0096d6);
+}
+
+/* กล่อง metric */
+[data-testid="metric-container"] {
+    background-color: #173F5F;
+    border-radius: 12px;
+    padding: 10px;
 }
 
 /* ตาราง */
 [data-testid="stDataFrame"] {
-    background-color: #1C1F26;
+    background-color: #12263A;
 }
 
 </style>
@@ -357,3 +377,4 @@ elif menu == "5. การแสดงผลข้อมูล (Visualization)":
     else:
 
         st.warning("⚠️ กรุณาดำเนินการ 'ทำความสะอาดข้อมูล' ในขั้นตอนที่ 2 ก่อนเพื่อความถูกต้องของกราฟ")
+
